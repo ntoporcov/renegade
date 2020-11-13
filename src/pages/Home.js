@@ -1,15 +1,10 @@
 import './App.css';
-import {Link} from "react-router-dom";
+import Hero from "../components/heroes/homeHero"
 
 function Home() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          This is Home
-        </p>
-          <Link to="/about"><button>About</button></Link>
-      </header>
+        <Hero/>
     </div>
   );
 }

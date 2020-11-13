@@ -1,40 +1,65 @@
 import React from "react";
-import {Nav, Container} from "react-bootstrap";
+import {Nav, Container, Navbar} from "react-bootstrap";
 import {createUseStyles} from "react-jss";
 import renegadeLogo from "../../img/logos/SVG/Logo Full - Gray.svg";
+import colors from "../../utils/colors"
 
 const useStyles = createUseStyles({
     navbar:{
-        paddingTop:2,
-        paddingBottom:2,
         display:"flex",
         alignItems:"center",
-        justifyContent:"space-between"
+        justifyContent:"space-between",
+        width:"100%",
+
+        '& img':{
+            width:250,
+            height:"auto"
+        }
+    },
+    navlink:{
+        paddingRight:"25px !important",
+        paddingLeft:"25px !important",
+        marginLeft:10,
+        borderRadius:3,
+        '&:hover':{
+            background:colors.teal,
+            color:colors.white+"! important",
+            boxShadow:"0 3px 5px rgba(0,0,0,.2)"
+        }
     }
 })
+
+
+
+const NavItem = (props) => {
+    const style = useStyles()
+
+    return (
+        <Nav.Item>
+            <Nav.Link className={style.navlink} href={props.href}>{props.text}</Nav.Link>
+        </Nav.Item>
+    )
+}
 
 export const NavBar = () => {
     const style = useStyles()
 
     return (
         <Container fluid>
-            <Container className={style.navbar}>
-                <img alt={"Renegade Resource Logo featuring a horse's head"} src={renegadeLogo}/>
-                <Nav className="justify-content-end">
-                    <Nav.Item>
-                            <Nav.Link href={"/about"}>Why Renegade</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                            <Nav.Link href={"/industries"}>Industries</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                            <Nav.Link href={"/team"}>Team</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <Nav.Link href={"/contact"}>Contact</Nav.Link>
-                    </Nav.Item>
-                </Nav>
-            </Container>
+                <Navbar expand={"md"} className={style.navbar}>
+                    <Navbar.Brand href={"/"}>
+                        <img alt={"Renegade Resource Logo featuring a horse's head"} src={renegadeLogo}/>
+                    </Navbar.Brand>
+                    <Navbar.Toggle/>
+                    <Navbar.Collapse className="justify-content-end">
+                        <Nav className={"text-center"}>
+                            <NavItem href={"/about"}        text={"Why Renegade"}/>
+                            <NavItem href={"/industries"}   text={"Industries"}/>
+                            <NavItem href={"/team"}         text={"Team"}/>
+                            <NavItem href={"/contact"}      text={"Contact"}/>
+                        </Nav>
+                    </Navbar.Collapse>
+                </Navbar>
         </Container>
     )
 }
