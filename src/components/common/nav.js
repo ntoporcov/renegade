@@ -19,7 +19,7 @@ export const NavBar = () => {
     return (
         <Container fluid>
             <Container className={style.navbar}>
-                <img src={renegadeLogo}/>
+                <img alt={"Renegade Resource Logo featuring a horse's head"} src={renegadeLogo}/>
                 <Nav className="justify-content-end">
                     <Nav.Item>
                             <Nav.Link href={"/about"}>Why Renegade</Nav.Link>
