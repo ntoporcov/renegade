@@ -1,3 +1,19 @@
+:root{
+  --teal:#00a4bf;
+  --gold:#ffc134;
+  --tealOffset:#507e86;
+  --white:#fff;
+  --black:#000;
+  --gray-almostWhite:#f8f8f8;
+  --gray-barely:#ededed;
+  --gray-lightest:#DADADA;
+  --gray-lighter:#cccccc;
+  --gray-light:#999999;
+  --gray-medium:#777777;
+  --gray-dark:#555555;
+  --gray-darker:#333333;
+}
+
 body {
   margin: 0;
   font-family: 'Helvetica Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,7 +23,75 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+a{
+  color: var(--teal) !important;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+a.button{
+  padding: 10px 15px;
+  background-color: white;
+  color: var(--teal);
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,.2);
+  transition: all ease-out .2s;
+  font-weight: 600;
+}
+
+a.button:hover{
+  box-shadow: 0 6px 6px rgba(0,0,0,.3);
+  background-color: var(--gray-barely);
+}
+
 h1 {
   font-size: 56px;
   font-weight: 600;
+}
+
+h2{
+  font-size: 34px;
+  font-weight: 600;
+  z-index: 2;
+}
+
+h2.simple{
+  color: var(--teal);
+  margin-bottom: 20px;
+}
+
+h2:not(.simple) span:before{
+  content:"";
+  display: inline-block;
+  background-color: var(--gold);
+  width: 40px;
+  height: 40px;
+  margin-right: -15px;
+  margin-bottom: 10px;
+  z-index: 0;
+}
+
+h2:not(.simple) span.teal:before{
+  background-color: var(--teal);
+}
+
+h3{
+  font-size: 18px;
+}
+
+p{
+  font-size: 16px;
+}
+
+.MuiFilledInput-root{
+  background-color: white !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,.2);
+  margin-bottom: 30px;
+}
+
+.textImage{
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,.3);
 }

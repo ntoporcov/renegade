@@ -20,7 +20,10 @@ const useStyles = createUseStyles({
         paddingRight:"25px !important",
         paddingLeft:"25px !important",
         marginLeft:10,
+        fontWeight:"700",
         borderRadius:3,
+        color:colors.gray.medium+" !important",
+
         '&:hover':{
             background:colors.teal,
             color:colors.white+"! important",
