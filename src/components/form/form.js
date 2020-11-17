@@ -1,21 +1,17 @@
 import React, {useState} from "react";
 import {Col} from "react-bootstrap";
-import {createUseStyles} from "react-jss";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 
-const useStyles = createUseStyles({
-
-})
-
 const FormCol = () => {
-    //const style = useStyles();
 
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
-    const [phone, phoneNumber] = useState("")
+    const [phone, setPhone] = useState("")
+    const [message, setMessage] = useState("")
 
-    const formData = {name,email,phoneNumber}
+
+    const formData = {name,email,phone,message}
 
     return (
         <Col>
@@ -42,7 +38,7 @@ const FormCol = () => {
                 color={"primary"}
                 label={"Phone Number"}
                 fullWidth={true}
-                onChange={(change)=>setEmail(change.target.value)}
+                onChange={(change)=>setPhone(change.target.value)}
             />
             <TextField
                 type={"text"}
@@ -52,13 +48,16 @@ const FormCol = () => {
                 color={"primary"}
                 label={"Enter Message"}
                 fullWidth={true}
-                onChange={(change)=>setEmail(change.target.value)}
+                onChange={(change)=>setMessage(change.target.value)}
             />
             <Button
                 fullWidth={true}
                 variant={"contained"}
                 color={"primary"}
                 size={"large"}
+                onClick={()=>{
+                    console.log(formData)
+                }}
             >
                 Send Message
             </Button>

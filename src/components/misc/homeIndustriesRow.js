@@ -39,7 +39,7 @@ const IndustryBox = (props) =>{
     return (
         <Col md={6} lg={3}>
             <div className={style.industryBox}>
-                <div style={{height:150,backgroundColor:"red"}}/>
+                <div style={{height:150,backgroundColor:colors.teal}}/>
                 <div className={"d-flex flex-column p-4"}>
                     <h3 className={style.industryBoxTitle}>{props.title}</h3>
                     <p className={style.industryBoxParagraph}>{props.paragraph}</p>
