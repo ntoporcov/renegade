@@ -8,6 +8,7 @@ import {NavBar} from "./components/common/nav";
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import colors from "./utils/colors";
 import Footer from "./components/common/footer";
+import Industries from "./pages/Industries";
 
 const theme = createMuiTheme({
     palette: {
@@ -19,9 +20,9 @@ const theme = createMuiTheme({
         },
         secondary: {
             light: colors.gold,
-            main: '#f44336',
-            dark: '#ba000d',
-            contrastText: '#000',
+            main: colors.white,
+            dark: colors.gray.barely,
+            contrastText: colors.teal,
         },
     },
 });
@@ -30,8 +31,9 @@ ReactDOM.render(
     <ThemeProvider theme={theme}>
         <BrowserRouter>
             <NavBar/>
-            <Route exact path="/" component={Home}/>
-            <Route path="/about" component={About}/>
+                <Route exact path="/" component={Home}/>
+                <Route path="/about" component={About}/>
+                <Route path="/industries" component={Industries}/>
             <Footer/>
         </BrowserRouter>
     </ThemeProvider>,

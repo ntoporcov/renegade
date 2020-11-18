@@ -3,6 +3,7 @@ import {Nav, Container, Navbar} from "react-bootstrap";
 import {createUseStyles} from "react-jss";
 import renegadeLogo from "../../img/logos/SVG/Logo Full - Gray.svg";
 import colors from "../../utils/colors"
+import {Link} from "react-router-dom";
 
 const useStyles = createUseStyles({
     navbar:{
@@ -39,7 +40,11 @@ const NavItem = (props) => {
 
     return (
         <Nav.Item>
-            <Nav.Link className={style.navlink} href={props.href}>{props.text}</Nav.Link>
+            <Nav.Link>
+                <Link className={"nav-link "+style.navlink} to={props.href}>
+                    {props.text}
+                </Link>
+            </Nav.Link>
         </Nav.Item>
     )
 }
@@ -50,9 +55,9 @@ export const NavBar = () => {
     return (
         <Container fluid>
                 <Navbar expand={"md"} className={style.navbar}>
-                    <Navbar.Brand href={"/"}>
+                    <Link to={"/"}>
                         <img alt={"Renegade Resource Logo featuring a horse's head"} src={renegadeLogo}/>
-                    </Navbar.Brand>
+                    </Link>
                     <Navbar.Toggle/>
                     <Navbar.Collapse className="justify-content-end">
                         <Nav className={"text-center"}>
