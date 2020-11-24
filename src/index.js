@@ -9,6 +9,8 @@ import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import colors from "./utils/colors";
 import Footer from "./components/common/footer";
 import Industries from "./pages/Industries";
+import Team from "./pages/Team"
+import Contact from "./pages/Contact";
 
 const theme = createMuiTheme({
     palette: {
@@ -34,6 +36,8 @@ ReactDOM.render(
                 <Route exact path="/" component={Home}/>
                 <Route path="/about" component={About}/>
                 <Route path="/industries" component={Industries}/>
+                <Route path="/team" component={Team}/>
+                <Route path="/contact" component={Contact}/>
             <Footer/>
         </BrowserRouter>
     </ThemeProvider>,
