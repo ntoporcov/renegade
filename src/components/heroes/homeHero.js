@@ -9,11 +9,18 @@ const useStyles = createUseStyles({
         height:"calc(100vh - 118px)",
         background:"url("+bgimage+") no-repeat center",
         backgroundSize:"cover",
+        backgroundPosition:"center 90px",
         textAlign:"center"
     },
     industries:{
         color:colors.gray.medium,
-        fontWeight:"600"
+        fontWeight:"600",
+        alignItems:"center",
+
+        "& span":{
+            display:"inline-block",
+            paddingBottom:"20px"
+        }
     }
 })
 
@@ -22,19 +29,19 @@ const Hero = () => {
 
     return (
         <Container fluid className={style.heroBG}>
-            <Container>
-                <Row className={"justify-content-center"}>
+            <Row className={"justify-content-center"}>
+                    <Col xs={12} sm={10} md={9} lg={7} xl={6}>
+                        <h1 className={"home"}>A NEW APPROACH TO RECRUITMENT</h1>
+                    </Col>
                     <Col md={9}>
-                        <h1 className={"pt-5"}>HEADLINE GOES HERE</h1>
                         <Row className={style.industries}>
-                            <Col><span>Accounting<br/>& Finance</span></Col>
-                            <Col><span>Construction</span></Col>
-                            <Col><span>Energy</span></Col>
-                            <Col><span>Engineering</span></Col>
+                            <Col xs={6} md={3}><span>Accounting & Finance</span></Col>
+                            <Col xs={6} md={3}><span>Construction</span></Col>
+                            <Col xs={6} md={3}><span>Energy</span></Col>
+                            <Col xs={6} md={3}><span>Engineering</span></Col>
                         </Row>
                     </Col>
                 </Row>
-            </Container>
         </Container>
     )
 }

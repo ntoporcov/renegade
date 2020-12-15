@@ -43,38 +43,18 @@ const TeamSummary = () => {
             <Row className={"justify-content-center pb-5"}>
                 <TeamMember
                     headshot={headshot}
-                    name={"John Doe"}
-                    position={"CEO"}
+                    name={"Colton Clark"}
+                    position={"President & Managing Partner"}
                 />
                 <TeamMember
                     headshot={headshot}
-                    name={"John Doe"}
-                    position={"CEO"}
+                    name={"Will LastName"}
+                    position={"VP & Managing Partner"}
                 />
                 <TeamMember
                     headshot={headshot}
-                    name={"John Doe"}
-                    position={"CEO"}
-                />
-                <TeamMember
-                    headshot={headshot}
-                    name={"John Doe"}
-                    position={"CEO"}
-                />
-                <TeamMember
-                    headshot={headshot}
-                    name={"John Doe"}
-                    position={"CEO"}
-                />
-                <TeamMember
-                    headshot={headshot}
-                    name={"John Doe"}
-                    position={"CEO"}
-                />
-                <TeamMember
-                    headshot={headshot}
-                    name={"John Doe"}
-                    position={"CEO"}
+                    name={"Clayton LastName"}
+                    position={"Sr. Executive Recruiter"}
                 />
             </Row>
         </Container>

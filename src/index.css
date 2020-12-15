@@ -51,6 +51,22 @@ h1 {
   font-weight: 600;
 }
 
+@media screen and (max-width: 500px) {
+  h1{
+    font-size:40px;
+  }
+}
+
+h1.home {
+  border: 5px solid black;
+  padding: 10px;
+  max-width: 598px;
+  text-align: center;
+  margin: 30px auto 30px;
+  background-color: white;
+  box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
 h2{
   font-size: 34px;
   font-weight: 600;
@@ -104,3 +120,16 @@ p{
   position: absolute;
   width: 100vw;
 }
+
+@media screen and (max-width: 900px) {
+  .navbar-brand{
+    max-width: 200px !important;
+  }
+
+  .nav-link{
+    margin-left: 0 !important;
+    padding: 3px !important;
+    font-size: 14px;
+  }
+}
+

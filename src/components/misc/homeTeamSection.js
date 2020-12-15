@@ -23,11 +23,10 @@ const TeamRow = () => {
         <Container fluid className={style.teamBackground}>
             <Container>
                 <Row>
-                    <Col md={{span:10,offset:2}} className={"pt-5"}>
-                        <h2><span className={"teal"}>Meet The Team</span></h2>
+                    <Col md={{span:10,offset:2}} className={"pt-5 pb-4"}>
+                        <h2><span className={"teal"}>We work with the best,<br/>so the best can work for you.</span></h2>
                     </Col>
                     <Col md={{span:3,offset:2}}>
-                        <p>Something about the team, this is kind of optional, we might not really need text here</p>
                         <Link to={"/team"}>
                             <Button
                                 variant={"contained"}

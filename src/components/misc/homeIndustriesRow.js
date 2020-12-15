@@ -37,7 +37,7 @@ const IndustryBox = (props) =>{
     const style = useStyles();
 
     return (
-        <Col md={6} lg={3}>
+        <Col md={6} lg={4}>
             <div className={style.industryBox}>
                 <div style={{height:150,backgroundColor:colors.teal}}/>
                 <div className={"d-flex flex-column p-4"}>
@@ -59,11 +59,11 @@ const IndustriesRow = () => {
                 <Row>
                     <Col>
                         <h2 style={{textAlign:"center"}}>
-                            <span className={"left"}>Our Industries</span>
+                            <span className={"left"}>Our Expertisee</span>
                         </h2>
                     </Col>
                 </Row>
-                <Row className={"mt-5 mb-5"}>
+                <Row className={"mt-5 mb-5 justify-content-center"}>
                     <IndustryBox
                         title={"Accounting & Finance"}
                         paragraph={"Something about services for this industry here and can go about 3 lines. Not too much but something."}
@@ -84,6 +84,12 @@ const IndustriesRow = () => {
 
                     <IndustryBox
                         title={"Engineering"}
+                        paragraph={"Something about services for this industry here and can go about 3 lines. Not too much but something."}
+                        href={"/industry#engineering"}
+                    />
+
+                    <IndustryBox
+                        title={"Executive Search"}
                         paragraph={"Something about services for this industry here and can go about 3 lines. Not too much but something."}
                         href={"/industry#engineering"}
                     />

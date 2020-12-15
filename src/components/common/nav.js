@@ -18,8 +18,8 @@ const useStyles = createUseStyles({
         }
     },
     navlink:{
-        paddingRight:"25px !important",
-        paddingLeft:"25px !important",
+        paddingRight:"15px !important",
+        paddingLeft:"15px !important",
         marginLeft:10,
         fontWeight:"700",
         borderRadius:3,
@@ -56,7 +56,7 @@ export const NavBar = () => {
         <Container fluid>
                 <Navbar expand={"md"} className={style.navbar}>
                     <Link to={"/"}>
-                        <img alt={"Renegade Resource Logo featuring a horse's head"} src={renegadeLogo}/>
+                        <img alt={"Renegade Resource Logo featuring a horse's head"} className={"navbar-brand"} src={renegadeLogo}/>
                     </Link>
                     <Navbar.Toggle/>
                     <Navbar.Collapse className="justify-content-end">
