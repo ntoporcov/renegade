@@ -31,7 +31,7 @@ const TeamRow = () => {
                             <Button
                                 variant={"contained"}
                                 color={"primary"}
-                            >Check It Out</Button>
+                            >Meet The Team</Button>
                         </Link>
                     </Col>
                 </Row>

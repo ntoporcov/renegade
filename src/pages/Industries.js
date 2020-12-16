@@ -16,6 +16,7 @@ const Industries = () => {
                 <SmallHero title={"Our Industries"}/>
                 <IndustriesColumns/>
                 <IndustryDetailRow
+                    id={"accounting"}
                     bg={imageBG}
                     icon={faIcons}
                     col={{
@@ -27,6 +28,7 @@ const Industries = () => {
                     clientList={[clientImage,clientImage]}
                 />
                 <IndustryDetailRow
+                    id={"construction"}
                     bg={imageBG}
                     icon={faIcons}
                     col={{
@@ -38,6 +40,7 @@ const Industries = () => {
                     clientList={[clientImage,clientImage]}
                 />
                 <IndustryDetailRow
+                    id={"energy"}
                     bg={imageBG}
                     icon={faIcons}
                     col={{
@@ -49,12 +52,25 @@ const Industries = () => {
                     clientList={[clientImage,clientImage]}
                 />
                 <IndustryDetailRow
+                    id={"engineering"}
                     bg={imageBG}
                     icon={faIcons}
                     col={{
                         md:{span:7,offset:3},
                     }}
                     title={"Engineering"}
+                    paragraph={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fermentum posuere urna nec tincidunt praesent semper feugiat. Dui nunc mattis enim ut. Ac orci phasellus egestas tellus rutrum tellus. Auctor eu augue ut lectus. "}
+                    services={["Service Here","Service Here","Service Here","Service Here","Service Here","Service Here","Service Here","Service Here","Service Here","Service Here"]}
+                    clientList={[clientImage,clientImage]}
+                />
+                <IndustryDetailRow
+                    id={"executivesearch"}
+                    bg={imageBG}
+                    icon={faIcons}
+                    col={{
+                        md:{span:7,offset:0},
+                    }}
+                    title={"ExecutiveSearch"}
                     paragraph={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fermentum posuere urna nec tincidunt praesent semper feugiat. Dui nunc mattis enim ut. Ac orci phasellus egestas tellus rutrum tellus. Auctor eu augue ut lectus. "}
                     services={["Service Here","Service Here","Service Here","Service Here","Service Here","Service Here","Service Here","Service Here","Service Here","Service Here"]}
                     clientList={[clientImage,clientImage]}

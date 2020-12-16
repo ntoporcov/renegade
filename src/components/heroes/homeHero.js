@@ -30,17 +30,17 @@ const Hero = () => {
     return (
         <Container fluid className={style.heroBG}>
             <Row className={"justify-content-center"}>
-                    <Col xs={12} sm={10} md={9} lg={7} xl={6}>
-                        <h1 className={"home"}>A NEW APPROACH TO RECRUITMENT</h1>
+                    <Col md={10}>
+                        <h1 className={"home"}>creating a new standard and approach to the recruitment industry</h1>
                     </Col>
-                    <Col md={9}>
-                        <Row className={style.industries}>
-                            <Col xs={6} md={3}><span>Accounting & Finance</span></Col>
-                            <Col xs={6} md={3}><span>Construction</span></Col>
-                            <Col xs={6} md={3}><span>Energy</span></Col>
-                            <Col xs={6} md={3}><span>Engineering</span></Col>
-                        </Row>
-                    </Col>
+                    {/*<Col>*/}
+                    {/*    <Row className={style.industries}>*/}
+                    {/*        <Col xs={6} md={3}><span>Accounting & Finance</span></Col>*/}
+                    {/*        <Col xs={6} md={3}><span>Construction</span></Col>*/}
+                    {/*        <Col xs={6} md={3}><span>Energy</span></Col>*/}
+                    {/*        <Col xs={6} md={3}><span>Engineering</span></Col>*/}
+                    {/*    </Row>*/}
+                    {/*</Col>*/}
                 </Row>
         </Container>
     )

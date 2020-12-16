@@ -3,6 +3,8 @@ import {Container, Row, Col} from "react-bootstrap";
 import {createUseStyles} from "react-jss";
 import colors from "../../utils/colors"
 import {Link} from "react-router-dom";
+import {HashLink} from 'react-router-hash-link';
+
 
 const useStyles = createUseStyles({
     industryBox:{
@@ -13,9 +15,21 @@ const useStyles = createUseStyles({
         overflow:"hidden",
         transition:"all ease-out .2s",
         marginBottom:30,
+        width:"calc(20% - 20px)",
+        margin:"0 10px",
 
         '&:hover':{
             boxShadow:"0 5px 8px rgba(0,0,0,.2)"
+        }
+    },
+    '@media screen and (max-width:992px)':{
+        industryBox:{
+            width: "calc(40% - 10px)"
+        }
+    },
+    '@media screen and (max-width:600px)':{
+        industryBox:{
+            width: "90%"
         }
     },
     industryBoxTitle:{
@@ -37,16 +51,16 @@ const IndustryBox = (props) =>{
     const style = useStyles();
 
     return (
-        <Col md={6} lg={4}>
+        // <Col xs={12} md={2}>
             <div className={style.industryBox}>
                 <div style={{height:150,backgroundColor:colors.teal}}/>
-                <div className={"d-flex flex-column p-4"}>
+                <div className={"d-flex flex-column p-4 justify-content-between h-50"}>
                     <h3 className={style.industryBoxTitle}>{props.title}</h3>
-                    <p className={style.industryBoxParagraph}>{props.paragraph}</p>
-                    <Link to={props.href} style={{textAlign:"right"}}>Learn More</Link>
+                    {/*<p className={style.industryBoxParagraph}>{props.paragraph}</p>*/}
+                    <HashLink to={props.href} style={{textAlign:"right"}}>Learn More</HashLink>
                 </div>
             </div>
-        </Col>
+        // </Col>
     )
 }
 
@@ -59,39 +73,35 @@ const IndustriesRow = () => {
                 <Row>
                     <Col>
                         <h2 style={{textAlign:"center"}}>
-                            <span className={"left"}>Our Expertisee</span>
+                            <span className={"left"}>Our Expertise</span>
                         </h2>
                     </Col>
                 </Row>
                 <Row className={"mt-5 mb-5 justify-content-center"}>
                     <IndustryBox
                         title={"Accounting & Finance"}
-                        paragraph={"Something about services for this industry here and can go about 3 lines. Not too much but something."}
-                        href={"/industry#accounting"}
+                        href={"/industries#accounting"}
                     />
 
                     <IndustryBox
                         title={"Construction"}
-                        paragraph={"Something about services for this industry here and can go about 3 lines. Not too much but something."}
-                        href={"/industry#construction"}
+                        href={"/industries#construction"}
                     />
 
                     <IndustryBox
                         title={"Energy"}
-                        paragraph={"Something about services for this industry here and can go about 3 lines. Not too much but something."}
-                        href={"/industry#energy"}
+                        href={"/industries#energy"}
                     />
 
                     <IndustryBox
                         title={"Engineering"}
                         paragraph={"Something about services for this industry here and can go about 3 lines. Not too much but something."}
-                        href={"/industry#engineering"}
+                        href={"/industries#engineering"}
                     />
 
                     <IndustryBox
                         title={"Executive Search"}
-                        paragraph={"Something about services for this industry here and can go about 3 lines. Not too much but something."}
-                        href={"/industry#engineering"}
+                        href={"/industries#executivesearch"}
                     />
                 </Row>
             </Container>

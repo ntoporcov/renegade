@@ -43,7 +43,7 @@ const IndustryDetailRow = (props) => {
     let ListIndex = 0;
 
     return (
-        <Container fluid className={style.industryBG} style={{
+        <Container fluid id={props.id} className={style.industryBG} style={{
             backgroundImage:"url("+props.bg+")",
         }}>
             <Container>
