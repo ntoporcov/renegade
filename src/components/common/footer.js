@@ -28,15 +28,15 @@ const Footer = () => {
 
     return (
         <Container fluid className={style.footer}>
-            <Row className={"pt-3 pb-3 justify-content-between align-items-center"}>
-                <Col>
-                    <Row className={"justify-content-center justify-content-md-start"}>
-                        <FooterLink href={"/about"} center={true} text={"Why Renegade"} colSize={3}/>
-                        <FooterLink href={"/industries"}   text={"Industries"}/>
-                        <FooterLink href={"/team"}         text={"Team"}/>
-                        <FooterLink href={"/contact"}      text={"Contact"}/>
-                    </Row>
-                </Col>
+            <Row className={"pt-3 pb-3 justify-content-end align-items-center"}>
+                {/*<Col>*/}
+                {/*    <Row className={"justify-content-center justify-content-md-start"}>*/}
+                {/*        <FooterLink href={"/about"} center={true} text={"Why Renegade"} colSize={3}/>*/}
+                {/*        <FooterLink href={"/industries"}   text={"Industries"}/>*/}
+                {/*        <FooterLink href={"/team"}         text={"Team"}/>*/}
+                {/*        <FooterLink href={"/contact"}      text={"Contact"}/>*/}
+                {/*    </Row>*/}
+                {/*</Col>*/}
                 <Col md={3}>
                     <img alt={"Renegade Resources logo"} src={whiteLogo}/>
                 </Col>

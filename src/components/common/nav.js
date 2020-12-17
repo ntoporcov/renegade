@@ -39,13 +39,9 @@ const NavItem = (props) => {
     const style = useStyles()
 
     return (
-        <Nav.Item>
-            <Nav.Link>
-                <Link className={"nav-link "+style.navlink} to={props.href}>
-                    {props.text}
-                </Link>
-            </Nav.Link>
-        </Nav.Item>
+        <Link className={"nav-link "+style.navlink} to={props.href}>
+            {props.text}
+        </Link>
     )
 }
 
