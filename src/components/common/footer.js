@@ -3,7 +3,7 @@ import {Container, Row, Col} from "react-bootstrap";
 import {createUseStyles} from "react-jss";
 import colors from "../../utils/colors"
 import whiteLogo from "../../img/logos/SVG/Logo Full - White.svg"
-import {Link} from "react-router-dom";
+// import {Link} from "react-router-dom";
 
 const useStyles = createUseStyles({
     footer:{
@@ -15,13 +15,13 @@ const useStyles = createUseStyles({
     }
 })
 
-const FooterLink = (props) => {
-    return (
-        <Col md={props.colSize || 2}  className={"text-center text-left-md"}>
-            <Link to={props.href}>{props.text}</Link>
-        </Col>
-    )
-}
+// const FooterLink = (props) => {
+//     return (
+//         <Col md={props.colSize || 2}  className={"text-center text-left-md"}>
+//             <Link to={props.href}>{props.text}</Link>
+//         </Col>
+//     )
+// }
 
 const Footer = () => {
     const style = useStyles();
