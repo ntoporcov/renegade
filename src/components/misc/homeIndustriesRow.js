@@ -2,7 +2,6 @@ import React from "react";
 import {Container, Row, Col} from "react-bootstrap";
 import {createUseStyles} from "react-jss";
 import colors from "../../utils/colors"
-import {Link} from "react-router-dom";
 import {HashLink} from 'react-router-hash-link';
 
 
