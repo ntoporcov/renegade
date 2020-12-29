@@ -1,16 +1,19 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {Container, Row, Col} from "react-bootstrap";
 import {createUseStyles} from "react-jss";
-import bgimage from "../../img/dave-hoefler-X6l7F9gL6rw-unsplash.jpg"
+import bgimage from "../../img/lance-asper-d9Cs-9I1fPo-unsplash.jpg"
 import colors from "../../utils/colors";
+import MouseScroll from "../../utils/mouseScroll"
 
 const useStyles = createUseStyles({
     heroBG:{
         height:"calc(100vh - 118px)",
         background:"url("+bgimage+") no-repeat center",
+        backgroundColor:"#a0a0a0",
+        backgroundBlendMode:"multiply",
         backgroundSize:"cover",
-        backgroundPosition:"center 90px",
-        textAlign:"center"
+        backgroundPosition:"center center",
+        textAlign:"center",
     },
     industries:{
         color:colors.gray.medium,
@@ -29,19 +32,14 @@ const Hero = () => {
 
     return (
         <Container fluid className={style.heroBG}>
-            <Row className={"justify-content-center"}>
-                    <Col md={10}>
-                        <h1 className={"home"}>creating a new standard and approach to the recruitment industry</h1>
-                    </Col>
-                    {/*<Col>*/}
-                    {/*    <Row className={style.industries}>*/}
-                    {/*        <Col xs={6} md={3}><span>Accounting & Finance</span></Col>*/}
-                    {/*        <Col xs={6} md={3}><span>Construction</span></Col>*/}
-                    {/*        <Col xs={6} md={3}><span>Energy</span></Col>*/}
-                    {/*        <Col xs={6} md={3}><span>Engineering</span></Col>*/}
-                    {/*    </Row>*/}
-                    {/*</Col>*/}
-                </Row>
+            <Row className={"h-100 flex-column align-items-center justify-content-space-between"}>
+                <Col sm={12} md={9} lg={8}>
+                    <h1 className={"home"}>Recruitment<br/>Redefined</h1>
+                </Col>
+                <Col className={"d-flex justify-content-center align-items-end pb-5"}>
+                    <MouseScroll/>
+                </Col>
+            </Row>
         </Container>
     )
 }

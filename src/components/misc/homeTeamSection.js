@@ -24,7 +24,7 @@ const TeamRow = () => {
             <Container>
                 <Row>
                     <Col md={{span:10,offset:2}} className={"pt-5 pb-4"}>
-                        <h2><span className={"teal"}>We work with the best,<br/>so the best can work for you.</span></h2>
+                        <h2><span className={"primary"}>We work with the best,<br/>so the best can work for you.</span></h2>
                     </Col>
                     <Col md={{span:3,offset:2}}>
                         <Link to={"/team"}>

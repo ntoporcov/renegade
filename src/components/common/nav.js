@@ -26,7 +26,7 @@ const useStyles = createUseStyles({
         color:colors.gray.medium+" !important",
 
         '&:hover':{
-            background:colors.teal,
+            background:colors.primary,
             color:colors.white+"! important",
             boxShadow:"0 3px 5px rgba(0,0,0,.2)"
         }

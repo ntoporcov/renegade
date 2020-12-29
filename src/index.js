@@ -15,16 +15,16 @@ import Contact from "./pages/Contact";
 const theme = createMuiTheme({
     palette: {
         primary: {
-            light: colors.lightTeal,
-            main: colors.teal,
-            dark: colors.darkTeal,
+            light: colors.primaryLight,
+            main: colors.primary,
+            dark: colors.primaryDark,
             contrastText: '#ffffff',
         },
         secondary: {
-            light: colors.gold,
+            light: colors.secondary,
             main: colors.white,
             dark: colors.gray.barely,
-            contrastText: colors.teal,
+            contrastText: colors.primary,
         },
     },
 });

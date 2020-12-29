@@ -36,7 +36,7 @@ const About = () => {
                         <h2 className={"simple"}>Why We're Different</h2>
                         <Row className={"pt-4 pb-4"}>
                             <Col md={2} className={"text-lg-center pb-3"}>
-                                <FontAwesomeIcon icon={faHandshakeAlt} size={"5x"} color={colors.teal}/>
+                                <FontAwesomeIcon icon={faHandshakeAlt} size={"5x"} color={colors.primary}/>
                             </Col>
                             <Col>
                                 <h3>Personalized Relationships</h3>
@@ -47,7 +47,7 @@ const About = () => {
                         </Row>
                         <Row className={"pt-4 pb-4"}>
                             <Col md={2} className={"text-lg-center pb-3"}>
-                                <FontAwesomeIcon icon={faAtom} size={"5x"} color={colors.teal}/>
+                                <FontAwesomeIcon icon={faAtom} size={"5x"} color={colors.primary}/>
                             </Col>
                             <Col>
                                 <h3>Knowledge of Industry</h3>
@@ -58,7 +58,7 @@ const About = () => {
                         </Row>
                         <Row className={"pt-4 pb-4"}>
                             <Col md={2} className={"text-lg-center pb-3"}>
-                                <FontAwesomeIcon icon={faLightbulbOn} size={"5x"} color={colors.teal}/>
+                                <FontAwesomeIcon icon={faLightbulbOn} size={"5x"} color={colors.primary}/>
                             </Col>
                             <Col>
                                 <h3>Innovation Driven</h3>

@@ -6,7 +6,7 @@ import FormCol from "./form";
 
 const useStyles = createUseStyles({
     pictureCol:{
-        background:"teal",
+        background:"primary",
         borderRadius:10,
         boxShadow:"0 3px 6px rgba(0,0,0,.2)"
     }

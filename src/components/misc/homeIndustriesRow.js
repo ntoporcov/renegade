@@ -39,9 +39,7 @@ const useStyles = createUseStyles({
         textAlign:"left",
     },
     industryBackground:{
-        marginTop:-150,
-        background:"linear-gradient(0deg, rgba(255,255,255,1) 85%, rgba(255,255,255,0) 100%);",
-        paddingTop:"10vw",
+        paddingTop:"100px",
         paddingBottom:"100px"
     }
 })
@@ -52,7 +50,7 @@ const IndustryBox = (props) =>{
     return (
         // <Col xs={12} md={2}>
             <div className={style.industryBox}>
-                <div style={{height:150,backgroundColor:colors.teal}}/>
+                <div style={{height:150,backgroundColor:colors.primary}}/>
                 <div className={"d-flex flex-column p-4 justify-content-between h-50"}>
                     <h3 className={style.industryBoxTitle}>{props.title}</h3>
                     {/*<p className={style.industryBoxParagraph}>{props.paragraph}</p>*/}

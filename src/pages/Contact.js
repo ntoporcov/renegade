@@ -31,15 +31,15 @@ const Contact = () => {
                         <Col style={{paddingLeft:40}} className={"mt-5 mt-lg-0"}>
                             <Row className={"text-center text-lg-left"}>
                                 <Col xs={12} className={"mb-5"}>
-                                    <h2><FontAwesomeIcon icon={faMailbox} color={colors.teal}/> Address</h2>
+                                    <h2><FontAwesomeIcon icon={faMailbox} color={colors.primary}/> Address</h2>
                                     <p className={"mb-0"}>123 Main St.<br/>Jacksonville, FL – 32224</p>
                                 </Col>
                                 <Col xs={12} className={"mb-5"}>
-                                    <h2><FontAwesomeIcon icon={faPhone} color={colors.teal}/> Phone</h2>
+                                    <h2><FontAwesomeIcon icon={faPhone} color={colors.primary}/> Phone</h2>
                                     <a href={"tel:(123) 123-1234"}>(123) 123-1234</a>
                                 </Col>
                                 <Col xs={12} className={"mb-5"}>
-                                    <h2><FontAwesomeIcon icon={faEnvelope} color={colors.teal}/> Email</h2>
+                                    <h2><FontAwesomeIcon icon={faEnvelope} color={colors.primary}/> Email</h2>
                                     <a href={"mailto:info@renegadeus.com"}>info@renegadeus.com</a>
                                 </Col>
                             </Row>

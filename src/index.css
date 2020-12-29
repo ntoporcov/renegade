@@ -1,6 +1,6 @@
 :root{
-  --teal:#00a4bf;
-  --gold:#ffc134;
+  --primary: #95C3EC;
+  --secondary:#ffc134;
   --tealOffset:#507e86;
   --white:#fff;
   --black:#000;
@@ -16,15 +16,13 @@
 
 body {
   margin: 0;
-  font-family: 'Helvetica Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 a{
-  color: var(--teal) !important;
+  color: var(--primary) !important;
 }
 
 a:hover{
@@ -34,7 +32,7 @@ a:hover{
 a.button{
   padding: 10px 15px;
   background-color: white;
-  color: var(--teal);
+  color: var(--primary);
   border-radius: 10px;
   box-shadow: 0 3px 6px rgba(0,0,0,.2);
   transition: all ease-out .2s;
@@ -47,38 +45,45 @@ a.button:hover{
 }
 
 h1 {
-  font-size: 56px;
+  font-size: 75px;
   font-weight: 600;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   h1{
     font-size:45px;
   }
 }
 
 h1.home {
-  padding: 10px;
+  padding: 20px;
   text-align: center;
-  margin: 30px auto 30px;
+  margin: 20vh auto 30px;
   text-transform: uppercase;
+  color:white;
+  border: 3px solid white;
+  backdrop-filter: blur(7px)brightness(130%)saturate(120%);
+  box-shadow: 0 6px 20px rgba(0,0,0,.4);
+  font-weight: 200;
+  letter-spacing: 5px;
+  max-width: 700px;
 }
 
 h2{
   font-size: 34px;
-  font-weight: 600;
+  font-weight: 400;
   z-index: 2;
 }
 
 h2.simple{
-  color: var(--teal);
+  color: var(--primary);
   margin-bottom: 20px;
 }
 
 h2:not(.simple) span:before{
   content:"";
   display: inline-block;
-  background-color: var(--gold);
+  background-color: var(--secondary);
   width: 40px;
   height: 40px;
   margin-right: -15px;
@@ -86,8 +91,8 @@ h2:not(.simple) span:before{
   z-index: 0;
 }
 
-h2:not(.simple) span.teal:before{
-  background-color: var(--teal);
+h2:not(.simple) span.primary:before{
+  background-color: var(--primary);
 }
 
 h3{
@@ -135,7 +140,7 @@ p{
 }
 
 .MuiPaper-root{
-  background-color: var(--teal) !important;
+  background-color: var(--primary) !important;
   color: white !important;
   font-weight: bold !important;
 }

@@ -1,12 +1,12 @@
 const colors = () => {
     return ({
-        teal:"#00a4bf",
-        lightTeal:"#69c0c6",
-        darkTeal:"#035661",
-        gold:"#ffc134",
-        goldDark:"#926e1e",
-        goldLight:"#ffd994",
-        tealOffset:"#507e86",
+        primary:"#78a1c1",
+        primaryLight:"#b889ea",
+        primaryDark:"#526e87",
+        secondary:"#ffc134",
+        secondaryDark:"#926e1e",
+        secondaryLight:"#ffd994",
+        primaryOffset:"#507e86",
         white:"#fff",
         black:"#000",
         gray:{

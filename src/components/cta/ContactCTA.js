@@ -7,7 +7,7 @@ import {Link} from "react-router-dom";
 const ContactCTA = () => {
 
     return (
-        <Container fluid style={{backgroundColor:colors.teal}}>
+        <Container fluid style={{backgroundColor:colors.primary}}>
             <Row>
                 <Col className={"pt-5 pb-5 text-center"}>
                     <h2 className={"simple"} style={{color:"white"}}>

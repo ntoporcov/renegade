@@ -8,8 +8,8 @@ import {faIcons} from "@fortawesome/pro-light-svg-icons";
 const IndustryCol = (props) => {
     return (
         <Col xs={10} md={3}>
-            <FontAwesomeIcon icon={faIcons} color={colors.teal} size={"5x"} className={"mb-3"}/>
-            <h3 style={{color: colors.teal}}>{props.title}</h3>
+            <FontAwesomeIcon icon={faIcons} color={colors.primary} size={"5x"} className={"mb-3"}/>
+            <h3 style={{color: colors.primary}}>{props.title}</h3>
             <p>{props.paragraph}</p>
         </Col>
     );

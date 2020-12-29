@@ -21,11 +21,11 @@ const useStyles = createUseStyles({
         marginTop:"-150px",
 
         '& h2':{
-            color:colors.teal
+            color:colors.primary
         },
 
         '& h3':{
-            color:colors.darkTeal
+            color:colors.primaryDark
         }
     },
     detailWrapper:{

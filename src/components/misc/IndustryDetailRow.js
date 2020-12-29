@@ -57,7 +57,7 @@ const IndustryDetailRow = (props) => {
                         className={style.details}
                     >
                         <h2 className={"simple"}>
-                            <FontAwesomeIcon icon={props.icon} size={"1x"} color={colors.teal}/>
+                            <FontAwesomeIcon icon={props.icon} size={"1x"} color={colors.primary}/>
                             &nbsp;&nbsp;
                             {props.title}
                         </h2>
@@ -65,7 +65,7 @@ const IndustryDetailRow = (props) => {
 
                         <Row>
                             <Col xs={12}>
-                                <h3 style={{color:colors.teal,fontWeight:"bold"}}>Services</h3>
+                                <h3 style={{color:colors.primary,fontWeight:"bold"}}>Services</h3>
                             </Col>
                             <Col>
                                 <ul>
@@ -91,7 +91,7 @@ const IndustryDetailRow = (props) => {
 
                         <Row>
                             <Col xs={12}>
-                                <h3 style={{color:colors.teal,fontWeight:"bold"}}>Clients</h3>
+                                <h3 style={{color:colors.primary,fontWeight:"bold"}}>Clients</h3>
                             </Col>
                                 {
                                     props.clientList?props.clientList.map((image)=>{
