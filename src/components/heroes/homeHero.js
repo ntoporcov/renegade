@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import {Container, Row, Col} from "react-bootstrap";
 import {createUseStyles} from "react-jss";
 import bgimage from "../../img/lance-asper-d9Cs-9I1fPo-unsplash.jpg"
