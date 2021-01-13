@@ -4,6 +4,7 @@ import {createUseStyles} from "react-jss";
 import colors from "../../utils/colors";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
+
 const useStyles = createUseStyles({
     industryBG:{
         backgroundSize:"cover",
@@ -27,10 +28,22 @@ const useStyles = createUseStyles({
 
         '& .row':{
             paddingTop:"15px"
+        },
+
+        '& li':{
+            lineBreak:"auto"
         }
     },
     logoImage:{
         filter:"grayscale(100%)"
+    },
+    '@media screen and (max-width: 768px)':{
+        industryBG:{
+          marginBottom:"100px",
+        },
+        details:{
+            padding: "25px",
+        }
     }
 })
 
@@ -40,7 +53,6 @@ const ListItem = (props) => {
 
 const IndustryDetailRow = (props) => {
     const style = useStyles();
-    let ListIndex = 0;
 
     return (
         <Container fluid id={props.id} className={style.industryBG} style={{
@@ -63,46 +75,64 @@ const IndustryDetailRow = (props) => {
                         </h2>
                         <p>{props.paragraph}</p>
 
-                        <Row>
-                            <Col xs={12}>
-                                <h3 style={{color:colors.primary,fontWeight:"bold"}}>Services</h3>
-                            </Col>
-                            <Col>
-                                <ul>
-                                    <ListItem value={props.services[ListIndex]}/>
-                                    <ListItem value={props.services[ListIndex++]}/>
-                                    <ListItem value={props.services[ListIndex++]}/>
-                                    <ListItem value={props.services[ListIndex++]}/>
-                                    <ListItem value={props.services[ListIndex++]}/>
-                                    <ListItem value={props.services[ListIndex++]}/>
-                                </ul>
-                            </Col>
-                            <Col>
-                                <ul>
-                                    <ListItem value={props.services[ListIndex++]}/>
-                                    <ListItem value={props.services[ListIndex++]}/>
-                                    <ListItem value={props.services[ListIndex++]}/>
-                                    <ListItem value={props.services[ListIndex++]}/>
-                                    <ListItem value={props.services[ListIndex++]}/>
-                                    <ListItem value={props.services[ListIndex++]}/>
-                                </ul>
-                            </Col>
-                        </Row>
+                        {props.areas?
+                            <Row>
+                                <Col xs={12}>
+                                    <h3 style={{color:colors.primary,fontWeight:"bold"}}>Areas of Focus</h3>
+                                </Col>
+                                <Col>
+                                    <ul>
+                                        {
+                                            props.areas.map((value,index) => (
+                                                index<props.areas.length/2?
+                                                    <ListItem value={value}/>:null
+                                            ))
+                                        }
+                                    </ul>
+                                </Col>
+                                <Col>
+                                    <ul>
+                                        {
+                                            props.areas.map((value,index) => (
+                                                index>=props.areas.length/2?
+                                                    <ListItem value={value}/>:null
+                                            ))
+                                        }
+                                    </ul>
+                                </Col>
+                            </Row>
+                            :null
+                        }
 
-                        <Row>
-                            <Col xs={12}>
-                                <h3 style={{color:colors.primary,fontWeight:"bold"}}>Clients</h3>
-                            </Col>
-                                {
-                                    props.clientList?props.clientList.map((image)=>{
-                                        return (
-                                            <Col xs={3}>
-                                                <img alt={"Client Logo"} src={image} className={"img-fluid "+style.logoImage}/>
-                                            </Col>
-                                        )
-                                    }):null
-                                }
-                        </Row>
+                        {props.searches ?
+                            <Row>
+                                <Col xs={12}>
+                                    <h3 style={{color:colors.primary,fontWeight:"bold"}}>Recent Searches</h3>
+                                </Col>
+                                <Col>
+                                    <ul>
+                                        {
+                                            props.searches.map((value,index) => (
+                                                index<props.searches.length/2?
+                                                    <ListItem value={value}/>:null
+                                            ))
+                                        }
+                                    </ul>
+                                </Col>
+                                <Col>
+                                    <ul>
+                                        {
+                                            props.searches.map((value,index) => (
+                                                index>=props.searches.length/2?
+                                                    <ListItem value={value}/>:null
+                                            ))
+                                        }
+                                    </ul>
+                                </Col>
+                            </Row>
+                            :null
+                        }
+
                     </Col>
                 </Row>
             </Container>
