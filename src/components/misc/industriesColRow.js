@@ -2,7 +2,7 @@ import React from "react";
 import {Container, Row, Col} from "react-bootstrap";
 import colors from "../../utils/colors"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faUserHardHat, faWindTurbine, faAbacus, faPencilRuler} from "@fortawesome/pro-duotone-svg-icons";
+import {faUserHardHat, faLightbulbOn, faAbacus, faPencilRuler} from "@fortawesome/pro-duotone-svg-icons";
 
 
 const IndustryCol = (props) => {
@@ -26,7 +26,7 @@ const IndustriesColumns = () => {
                     paragraph={"We're the best working with this industry because we are really cool and we are nice"}
                 />
                 <IndustryCol
-                    icon={faWindTurbine}
+                    icon={faLightbulbOn}
                     title={"Energy"}
                     paragraph={"We're the best working with this industry because we are really cool and we are nice"}
                 />

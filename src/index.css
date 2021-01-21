@@ -1,7 +1,7 @@
 :root{
   --primary: #95C3EC;
   --secondary:#ffc134;
-  --tealOffset:#507e86;
+  --primaryOffset: #5b82aa;
   --white:#fff;
   --black:#000;
   --gray-almostWhite:#f8f8f8;
@@ -22,11 +22,12 @@ body {
 }
 
 a{
-  color: var(--primary) !important;
+  color: var(--primaryOffset) !important;
 }
 
 a:hover{
   text-decoration: none;
+  color: var(--primary) !important;
 }
 
 a.button{

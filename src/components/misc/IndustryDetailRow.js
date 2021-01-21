@@ -5,53 +5,54 @@ import colors from "../../utils/colors";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 
-const useStyles = createUseStyles({
-    industryBG:{
-        backgroundSize:"cover",
-        backgroundBlendMode:"multiply",
-        backgroundColor:colors.gray.dark,
-        backgroundPosition:"center",
-        marginBottom:"300px",
-        marginTop:"100px",
-        minHeight:"100vh",
-
-        '&:last-of-type':{
-            marginBottom:0
-        }
-    },
-    details:{
-        backgroundColor:colors.white,
-        padding:"50px",
-        marginBottom:"100px",
-        borderBottomRightRadius:"30px",
-        borderBottomLeftRadius:"30px",
-
-        '& .row':{
-            paddingTop:"15px"
-        },
-
-        '& li':{
-            lineBreak:"auto"
-        }
-    },
-    logoImage:{
-        filter:"grayscale(100%)"
-    },
-    '@media screen and (max-width: 768px)':{
-        industryBG:{
-          marginBottom:"100px",
-        },
-        details:{
-            padding: "25px",
-        }
-    }
-})
 
 const ListItem = (props) => {
     return props.value?<li>{props.value}</li>:null
 }
 
 const IndustryDetailRow = (props) => {
+    const useStyles = createUseStyles({
+        industryBG:{
+            backgroundSize:"cover",
+            backgroundBlendMode:"multiply",
+            backgroundColor:colors.gray.dark,
+            backgroundPosition:"center",
+            marginBottom:"300px",
+            marginTop:"100px",
+            minHeight:"100vh",
+
+            '&:last-of-type':{
+                marginBottom:0
+            }
+        },
+        details:{
+            backgroundColor:colors.white,
+            padding:"50px",
+            marginBottom:"100px",
+            boxShadow:props.shadowDirection==="left"?"-14px 14px 0 var(--primary)":"14px 14px 0 var(--primary)",
+
+            '& .row':{
+                paddingTop:"15px"
+            },
+
+            '& li':{
+                lineBreak:"auto"
+            }
+        },
+        logoImage:{
+            filter:"grayscale(100%)"
+        },
+        '@media screen and (max-width: 768px)':{
+            industryBG:{
+                marginBottom:"100px",
+            },
+            details:{
+                padding: "25px",
+            }
+        }
+    })
+
+
     const style = useStyles();
 
     return (

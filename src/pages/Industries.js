@@ -2,9 +2,11 @@ import React from "react";
 import SmallHero from "../components/heroes/smallHero";
 import IndustriesColumns from "../components/misc/industriesColRow";
 import IndustryDetailRow from "../components/misc/IndustryDetailRow";
-import imageBG from "../img/annie-spratt-sggw4-qDD54-unsplash.jpg"
+import imageBG from "../img/annie-spratt-sggw4-qDD54-unsplash.jpg";
+import energyImage from "../img/gas-863199_1280.jpg";
+import constructionImage from "../img/james-sullivan-ESZRBtkQ_f8-unsplash.jpg"
 import ContactCTA from "../components/cta/ContactCTA";
-import {faUserHardHat, faWindTurbine, faAbacus, faPencilRuler} from "@fortawesome/pro-duotone-svg-icons";
+import {faUserHardHat, faLightbulbOn, faAbacus, faPencilRuler} from "@fortawesome/pro-duotone-svg-icons";
 
 const Industries = () => {
     //const style = useStyles();
@@ -16,10 +18,13 @@ const Industries = () => {
                 <IndustriesColumns/>
                 <IndustryDetailRow
                     id={"construction"}
-                    bg={imageBG}
+                    bg={constructionImage}
                     icon={faUserHardHat}
+                    shadowDirection={"left"}
                     col={{
-                        md:{span:10,offset:0},
+                        xl:{span:7,offset:0},
+                        lg:{span:8,offset:0},
+                        md:{span:12,offset:0}
                     }}
                     title={"Construction"}
                     paragraph={"Renegade Resources’ construction division partners with General Contractors, Construction Managers, Developers, and Owners Reps.  Our team’s construction expertise, compounded with our recruiting experience, delivers our clients unparalleled talent in the market."}
@@ -61,10 +66,12 @@ const Industries = () => {
                 />
                 <IndustryDetailRow
                     id={"energy"}
-                    bg={imageBG}
-                    icon={faWindTurbine}
+                    bg={energyImage}
+                    icon={faLightbulbOn}
                     col={{
-                        md:{span:10,offset:2},
+                        xl:{span:8,offset:4},
+                        lg:{span:8,offset:3},
+                        md:{span:12,offset:0}
                     }}
                     title={"Exploration & Production"}
                     paragraph={"The Renegade Resources’ team are specialist in Exploration & Production and partner with upstream companies in every major play and onshore basin across the country. We have a core focus in executive and non-executive searches for small to mid-size E&P operators in the U.S. and Canada. Additionally, we assist startups and private equity backed energy firms with early-stage growth. Our team has a passion for the oil industry and have built lasting relationships over the last decade."}
@@ -100,6 +107,7 @@ const Industries = () => {
                     col={{
                         md:{span:10,offset:0},
                     }}
+                    shadowDirection={"left"}
                     title={"Accounting"}
                     paragraph={"Renegade Resources’ Accounting & Finance Division partners with top Banking & Commercial Finance Institutions, Consumer, Family Office, Healthcare, Private Equity, Retail & Hospitality, and Wealth Management Firms. With backgrounds in the finance industry, Renegade’s Executives and Recruiters bring real-world applications to our crafted approach."}
                     areas={[
