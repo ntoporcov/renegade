@@ -2,7 +2,6 @@ import React from "react";
 import {Container, Row, Col} from "react-bootstrap";
 import {createUseStyles} from "react-jss";
 import colors from "../../utils/colors"
-import heroBG from "../../img/annie-spratt-sggw4-qDD54-unsplash.jpg";
 import headshot from "../../img/headshots/test.jpg"
 import coltonFeatured from "../../img/james-obernesser-fMHm-ejtF0E-unsplash-pichi.jpg"
 import willFeatured from "../../img/stephen-momot-UivGzIDhVyw-unsplash-pichi.jpg"
