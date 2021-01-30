@@ -4,10 +4,14 @@ import {createUseStyles} from "react-jss";
 import colors from "../../utils/colors"
 import heroBG from "../../img/annie-spratt-sggw4-qDD54-unsplash.jpg";
 import headshot from "../../img/headshots/test.jpg"
+import coltonFeatured from "../../img/james-obernesser-fMHm-ejtF0E-unsplash-pichi.jpg"
+import willFeatured from "../../img/stephen-momot-UivGzIDhVyw-unsplash-pichi.jpg"
+import claytonFeatured from "../../img/allan-nygren--xvKQuNtOhI-unsplash-pichi.jpg"
 
 const useStyles = createUseStyles({
     featuredImage:{
-        height:"500px"
+        height:"500px",
+        backgroundSize:"cover !important"
     },
     headshot:{
         borderRadius:"100%",
@@ -41,7 +45,7 @@ const TeamMemberDetail = (props) => {
             <Row
                 fluid
                 className={style.featuredImage}
-                style={{background:"url("+props.featuredImage+") no-repeat center",backgroundSize: "cover"}}
+                style={{background:"url("+props.featuredImage+") no-repeat center"}}
             />
             <Container>
                 <Row className={"justify-content-center"}>
@@ -79,7 +83,7 @@ const TeamDetails = () => {
     return (
         <Container fluid style={{backgroundColor: colors.gray.barely}}>
             <TeamMemberDetail
-                featuredImage={heroBG}
+                featuredImage={coltonFeatured}
                 headshot={headshot}
                 name={"Colton Clark"}
                 position={"President & Managing Partner"}
@@ -98,7 +102,7 @@ const TeamDetails = () => {
                 ]}
             />
             <TeamMemberDetail
-                featuredImage={heroBG}
+                featuredImage={willFeatured}
                 headshot={headshot}
                 name={"Will LastName"}
                 position={"VP & Managing Partner"}
@@ -117,10 +121,10 @@ const TeamDetails = () => {
                 ]}
             />
             <TeamMemberDetail
-                featuredImage={heroBG}
+                featuredImage={claytonFeatured}
                 headshot={headshot}
-                name={"Will LastName"}
-                position={"VP & Managing Partner"}
+                name={"Clayton LastName"}
+                position={"Sr. Executive Recruiter"}
                 description={
                     <div>
                         As Sr. Executive Recruiter at Renegade Resources, Clayton spearheads all recruiting efforts in accounting and finance, construction, energy, engineering, and executive search. In his role, he sources leading talent for a wide range of employers, working closely with candidates to assist them in finding their next dream job.<br/><br/>
