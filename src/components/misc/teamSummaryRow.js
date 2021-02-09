@@ -50,12 +50,12 @@ const TeamSummary = () => {
                 />
                 <TeamMember
                     headshot={willHeadshot}
-                    name={"Will LastName"}
+                    name={"Will Sheaf"}
                     position={"VP & Managing Partner"}
                 />
                 <TeamMember
                     headshot={claytonHeadshot}
-                    name={"Clayton LastName"}
+                    name={"Clayton Fraleigh"}
                     position={"Sr. Executive Recruiter"}
                 />
             </Row>

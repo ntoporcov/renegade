@@ -14,6 +14,11 @@ const useStyles = createUseStyles({
         backgroundBlendMode:"multiply",
         minHeight:"80vh",
         color:"white !important"
+    },
+    '@media screen and (max-width: 930px)':{
+        teamBackground:{
+            backgroundPosition:"72% bottom",
+        }
     }
 })
 

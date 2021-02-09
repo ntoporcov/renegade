@@ -1,9 +1,9 @@
-import React from "react";
+import React, {useEffect, useState} from 'react';
 import {Nav, Container, Navbar} from "react-bootstrap";
 import {createUseStyles} from "react-jss";
 import renegadeLogo from "../../img/logos/SVG/Logo Full - Gray.svg";
 import colors from "../../utils/colors"
-import {Link} from "react-router-dom";
+import {Link, useLocation} from 'react-router-dom';
 
 const useStyles = createUseStyles({
     navbar:{
@@ -47,14 +47,20 @@ const NavItem = (props) => {
 
 export const NavBar = () => {
     const style = useStyles()
+    const routerLocation = useLocation();
+    const [navExpanded, setNavExpanded] = useState(false)
+
+    useEffect(() => {
+        setNavExpanded(false)
+    }, [routerLocation]);
 
     return (
         <Container fluid>
-                <Navbar expand={"md"} className={style.navbar}>
+                <Navbar expand={"md"} className={style.navbar} expanded={navExpanded}>
                     <Link to={"/"}>
                         <img alt={"Renegade Resource Logo featuring a horse's head"} className={"navbar-brand"} src={renegadeLogo}/>
                     </Link>
-                    <Navbar.Toggle/>
+                    <Navbar.Toggle onClick={()=>setNavExpanded(!navExpanded)}/>
                     <Navbar.Collapse className="justify-content-end">
                         <Nav className={"text-center"}>
                             <NavItem href={"/about"}        text={"Why Renegade"}/>

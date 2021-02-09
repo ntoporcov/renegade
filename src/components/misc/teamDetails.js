@@ -111,7 +111,7 @@ const TeamDetails = () => {
             <TeamMemberDetail
                 featuredImage={claytonFeatured}
                 headshot={claytonHeadshot}
-                name={"Clayton LastName"}
+                name={"Clayton Fraleigh"}
                 position={"Sr. Executive Recruiter"}
                 description={
                     <div>

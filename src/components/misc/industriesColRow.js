@@ -7,7 +7,7 @@ import {faUserHardHat, faLightbulbOn, faAbacus, faPencilRuler} from "@fortawesom
 
 const IndustryCol = (props) => {
     return (
-        <Col xs={10} md={3}>
+        <Col xs={10} md={3} className={"mb-5"}>
             <FontAwesomeIcon icon={props.icon} color={colors.primary} size={"5x"} className={"mb-3"}/>
             <h3 style={{color: colors.primary}}>{props.title}</h3>
             <p>{props.paragraph}</p>
@@ -19,7 +19,7 @@ const IndustriesColumns = () => {
 
     return (
         <Container>
-            <Row className={"pb-5 pt-5 text-center justify-content-center justify-content-md-start"}>
+            <Row className={"pt-5 text-center justify-content-center justify-content-md-start"}>
                 <IndustryCol
                     icon={faUserHardHat}
                     title={"Construction"}

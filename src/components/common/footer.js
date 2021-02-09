@@ -37,7 +37,7 @@ const Footer = () => {
                 {/*        <FooterLink href={"/contact"}      text={"Contact"}/>*/}
                 {/*    </Row>*/}
                 {/*</Col>*/}
-                <Col md={3}>
+                <Col xs={6} sm={4} md={3}>
                     <img alt={"Renegade Resources logo"} src={whiteLogo}/>
                 </Col>
             </Row>
