@@ -1,7 +1,9 @@
 import React from "react";
 import {Container, Row, Col} from "react-bootstrap";
 import {createUseStyles} from "react-jss";
-import headshot from "../../img/headshots/test.jpg"
+import coltonHeadshot from "../../img/headshots/small/Renegade-102-square.jpg"
+import claytonHeadshot from "../../img/headshots/small/Renegade-106-square.jpg"
+import willHeadshot from "../../img/headshots/small/Renegade-108-square.jpg"
 
 const useStyles = createUseStyles({
     headshot:{
@@ -42,17 +44,17 @@ const TeamSummary = () => {
             </Row>
             <Row className={"justify-content-center pb-5"}>
                 <TeamMember
-                    headshot={headshot}
+                    headshot={coltonHeadshot}
                     name={"Colton Clark"}
                     position={"President & Managing Partner"}
                 />
                 <TeamMember
-                    headshot={headshot}
+                    headshot={willHeadshot}
                     name={"Will LastName"}
                     position={"VP & Managing Partner"}
                 />
                 <TeamMember
-                    headshot={headshot}
+                    headshot={claytonHeadshot}
                     name={"Clayton LastName"}
                     position={"Sr. Executive Recruiter"}
                 />

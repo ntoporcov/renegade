@@ -1,22 +1,18 @@
 import React from "react";
 import {Col, Container, Row} from "react-bootstrap";
-import image1 from "../img/annie-spratt-sggw4-qDD54-unsplash.jpg";
+import image1 from "../img/headshots/large/Renegade-122.jpg";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faAtom, faHandshakeAlt, faLightbulbOn} from "@fortawesome/pro-duotone-svg-icons";
 import colors from "../utils/colors";
 import ContactCTA from "../components/cta/ContactCTA";
 import SmallHero from "../components/heroes/smallHero";
+import bgImage from "../img/mike-scheid-xoYPV4oVQJI-unsplash-pichi.jpg"
 
 const About = () => {
 
-    let list=[];
-    for(let i=0;i < 13; i++){
-        list.push('Service Here')
-    }
-
     return (
         <>
-            <SmallHero title={"Why Renegade"}/>
+            <SmallHero image={bgImage} title={"Why Renegade"}/>
             <Container>
                 <Row className={"justify-content-center"}>
                     <Col md={12} lg={8} className={"pt-5 pb-5"}>

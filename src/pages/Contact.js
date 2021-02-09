@@ -5,7 +5,8 @@ import colors from "../utils/colors"
 import BigHero from "../components/heroes/bigHero";
 import FormCol from "../components/form/form";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faEnvelope,faPhone,faMailbox} from "@fortawesome/pro-duotone-svg-icons";
+import {faEnvelope,faMailbox} from "@fortawesome/pro-duotone-svg-icons";
+import image from "../img/lance-asper-d9Cs-9I1fPo-unsplash.jpg"
 
 const useStyles = createUseStyles({
     formCol:{
@@ -21,7 +22,7 @@ const Contact = () => {
 
     return (
         <div>
-            <BigHero height={"60vh"}/>
+            <BigHero image={image} height={"60vh"}/>
             <Container fluid style={{backgroundColor:colors.gray.almostWhite}}>
                 <Container>
                     <Row className={"pt-5 pb-5 justify-content-center"}>
@@ -32,12 +33,12 @@ const Contact = () => {
                             <Row className={"text-center text-lg-left"}>
                                 <Col xs={12} className={"mb-5"}>
                                     <h2><FontAwesomeIcon icon={faMailbox} color={colors.primary}/> Address</h2>
-                                    <p className={"mb-0"}>123 Main St.<br/>Jacksonville, FL – 32224</p>
+                                    <p className={"mb-0"}>1510 Robert’s Dr<br/>Jacksonville Beach, FL – 32250</p>
                                 </Col>
-                                <Col xs={12} className={"mb-5"}>
-                                    <h2><FontAwesomeIcon icon={faPhone} color={colors.primary}/> Phone</h2>
-                                    <a href={"tel:(123) 123-1234"}>(123) 123-1234</a>
-                                </Col>
+                                {/*<Col xs={12} className={"mb-5"}>*/}
+                                {/*    <h2><FontAwesomeIcon icon={faPhone} color={colors.primary}/> Phone</h2>*/}
+                                {/*    <a href={"tel:(123) 123-1234"}>(123) 123-1234</a>*/}
+                                {/*</Col>*/}
                                 <Col xs={12} className={"mb-5"}>
                                     <h2><FontAwesomeIcon icon={faEnvelope} color={colors.primary}/> Email</h2>
                                     <a href={"mailto:info@renegadeus.com"}>info@renegadeus.com</a>

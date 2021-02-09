@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, useLocation } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import {NavBar} from "./components/common/nav";
@@ -29,15 +29,26 @@ const theme = createMuiTheme({
     },
 });
 
+function ScrollToTop() {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
+
+    return null;
+}
+
 ReactDOM.render(
     <ThemeProvider theme={theme}>
         <BrowserRouter>
+            <ScrollToTop/>
             <NavBar/>
-                <Route exact path="/" component={Home}/>
-                <Route path="/about" component={About}/>
-                <Route path="/industries" component={Industries}/>
-                <Route path="/team" component={Team}/>
-                <Route path="/contact" component={Contact}/>
+            <Route exact path="/" component={Home}/>
+            <Route path="/about" component={About}/>
+            <Route path="/industries" component={Industries}/>
+            <Route path="/team" component={Team}/>
+            <Route path="/contact" component={Contact}/>
             <Footer/>
         </BrowserRouter>
     </ThemeProvider>,

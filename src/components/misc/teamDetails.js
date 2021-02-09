@@ -2,9 +2,11 @@ import React from "react";
 import {Container, Row, Col} from "react-bootstrap";
 import {createUseStyles} from "react-jss";
 import colors from "../../utils/colors"
-import headshot from "../../img/headshots/test.jpg"
 import coltonFeatured from "../../img/james-obernesser-fMHm-ejtF0E-unsplash-pichi.jpg"
+import coltonHeadshot from "../../img/headshots/small/Renegade-102-square.jpg"
 import willFeatured from "../../img/stephen-momot-UivGzIDhVyw-unsplash-pichi.jpg"
+import willHeadshot from "../../img/headshots/small/Renegade-108-square.jpg"
+import claytonHeadshot from "../../img/headshots/small/Renegade-106-square.jpg"
 import claytonFeatured from "../../img/allan-nygren--xvKQuNtOhI-unsplash-pichi.jpg"
 
 const useStyles = createUseStyles({
@@ -42,7 +44,6 @@ const TeamMemberDetail = (props) => {
     return(
         <div className={style.detailWrapper}>
             <Row
-                fluid
                 className={style.featuredImage}
                 style={{background:"url("+props.featuredImage+") no-repeat center"}}
             />
@@ -59,7 +60,7 @@ const TeamMemberDetail = (props) => {
                                 {props.description}
                                 <Row className={"pt-4"}>
                                     {
-                                        props.questions.map((item,index)=>{
+                                        props.questions?.map((item,index)=>{
                                             return  (
                                                 <Col lg={6} key={index} className={"pt-3"}>
                                                     <h3>{item[0]}</h3>
@@ -83,7 +84,7 @@ const TeamDetails = () => {
         <Container fluid style={{backgroundColor: colors.gray.barely}}>
             <TeamMemberDetail
                 featuredImage={coltonFeatured}
-                headshot={headshot}
+                headshot={coltonHeadshot}
                 name={"Colton Clark"}
                 position={"President & Managing Partner"}
                 description={
@@ -93,17 +94,11 @@ const TeamDetails = () => {
                         Colton is originally from Chattanooga, Tennessee and made the move to Florida shortly after high school. From there, Colton acquired two bachelor’s degrees from Florida State University, in Finance and Real Estate. Thereafter, Colton worked with a recruitment firm ranked among the top firms by Forbes. It was in this position that Colton cultivated his own model for a more personable experience in the headhunting industry.
                     </p>
                 }
-                questions={[
-                    ['What\'s your cover image?','Just the image I used everywhere'],
-                    ['You have a common name right?','Hell yeah, really common'],
-                    ['What\'s your cover image?','Just the image I used everywhere'],
-                    ['You have a common name right?','Hell yeah, really common'],
-                ]}
             />
             <TeamMemberDetail
                 featuredImage={willFeatured}
-                headshot={headshot}
-                name={"Will LastName"}
+                headshot={willHeadshot}
+                name={"Will Sheaf"}
                 position={"VP & Managing Partner"}
                 description={
                     <p>
@@ -112,16 +107,10 @@ const TeamDetails = () => {
                         After receiving his bachelor’s degree in social sciences from Florida State University, Will joined a national staffing and services company before moving into the executive search space. After experiencing rapid success with a recruiting outfit in Jacksonville, FL, Renegade Resources became the product of a tailored approach to executive placements.
                     </p>
                 }
-                questions={[
-                    ['What\'s your cover image?','Just the image I used everywhere'],
-                    ['You have a common name right?','Hell yeah, really common'],
-                    ['What\'s your cover image?','Just the image I used everywhere'],
-                    ['You have a common name right?','Hell yeah, really common'],
-                ]}
             />
             <TeamMemberDetail
                 featuredImage={claytonFeatured}
-                headshot={headshot}
+                headshot={claytonHeadshot}
                 name={"Clayton LastName"}
                 position={"Sr. Executive Recruiter"}
                 description={
@@ -132,12 +121,6 @@ const TeamDetails = () => {
                         In his spare time, Clayton enjoys spending time with his wife, Kelly, and yellow Labrador, Miller, golfing or watching the Seminoles.
                     </div>
                 }
-                questions={[
-                    ['What\'s your cover image?','Just the image I used everywhere'],
-                    ['You have a common name right?','Hell yeah, really common'],
-                    ['What\'s your cover image?','Just the image I used everywhere'],
-                    ['You have a common name right?','Hell yeah, really common'],
-                ]}
             />
         </Container>
     )

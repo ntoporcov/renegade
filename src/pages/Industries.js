@@ -2,11 +2,14 @@ import React from "react";
 import SmallHero from "../components/heroes/smallHero";
 import IndustriesColumns from "../components/misc/industriesColRow";
 import IndustryDetailRow from "../components/misc/IndustryDetailRow";
-import imageBG from "../img/annie-spratt-sggw4-qDD54-unsplash.jpg";
 import energyImage from "../img/gas-863199_1280.jpg";
 import constructionImage from "../img/james-sullivan-ESZRBtkQ_f8-unsplash.jpg"
 import ContactCTA from "../components/cta/ContactCTA";
 import {faUserHardHat, faLightbulbOn, faAbacus, faPencilRuler} from "@fortawesome/pro-duotone-svg-icons";
+import bgImage from "../img/science-in-hd-pAzSrQF3XUQ-unsplash-pichi.jpg"
+import engineeringImage from "../img/sigmund-r9PeXDCJyEw-unsplash-pichi.jpg"
+import accountingImage from "../img/sean-pollock-PhYq704ffdA-unsplash-pichi.jpg"
+
 
 const Industries = () => {
     //const style = useStyles();
@@ -14,7 +17,7 @@ const Industries = () => {
     return (
         <>
             <div>
-                <SmallHero title={"Our Industries"}/>
+                <SmallHero title={"Our Industries"} image={bgImage}/>
                 <IndustriesColumns/>
                 <IndustryDetailRow
                     id={"construction"}
@@ -102,10 +105,10 @@ const Industries = () => {
                 />
                 <IndustryDetailRow
                     id={"accounting"}
-                    bg={imageBG}
+                    bg={accountingImage}
                     icon={faAbacus}
                     col={{
-                        md:{span:10,offset:0},
+                        md:{span:10,offset:1},
                     }}
                     shadowDirection={"left"}
                     title={"Accounting"}
@@ -131,10 +134,10 @@ const Industries = () => {
                 />
                 <IndustryDetailRow
                     id={"engineering"}
-                    bg={imageBG}
+                    bg={engineeringImage}
                     icon={faPencilRuler}
                     col={{
-                        md:{span:10,offset:2},
+                        md:{span:10,offset:0},
                     }}
                     title={"Engineering"}
                     paragraph={"Renegade Resources’ Engineering Division partners with leading engineering & design firms that focus on mechanical and electrical manufacturing. With engineering being one of our most dynamic fields, Renegade harnesses years of technical acumen, augmented with acute attention to detail. As a result, we offer our clients a competitive edge within an everchanging industry."}

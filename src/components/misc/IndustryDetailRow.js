@@ -86,7 +86,7 @@ const IndustryDetailRow = (props) => {
                                         {
                                             props.areas.map((value,index) => (
                                                 index<props.areas.length/2?
-                                                    <ListItem value={value}/>:null
+                                                    <ListItem value={value} key={index}/>:null
                                             ))
                                         }
                                     </ul>
@@ -96,7 +96,7 @@ const IndustryDetailRow = (props) => {
                                         {
                                             props.areas.map((value,index) => (
                                                 index>=props.areas.length/2?
-                                                    <ListItem value={value}/>:null
+                                                    <ListItem value={value} key={index}/>:null
                                             ))
                                         }
                                     </ul>
@@ -115,7 +115,7 @@ const IndustryDetailRow = (props) => {
                                         {
                                             props.searches.map((value,index) => (
                                                 index<props.searches.length/2?
-                                                    <ListItem value={value}/>:null
+                                                    <ListItem value={value} key={index}/>:null
                                             ))
                                         }
                                     </ul>
@@ -125,7 +125,7 @@ const IndustryDetailRow = (props) => {
                                         {
                                             props.searches.map((value,index) => (
                                                 index>=props.searches.length/2?
-                                                    <ListItem value={value}/>:null
+                                                    <ListItem value={value} key={index}/>:null
                                             ))
                                         }
                                     </ul>

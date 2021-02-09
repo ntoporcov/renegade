@@ -3,12 +3,16 @@ import {Container, Row, Col} from "react-bootstrap";
 import {createUseStyles} from "react-jss";
 import colors from "../../utils/colors"
 import FormCol from "./form";
+import imageBackground from "../../img/james-sullivan-ESZRBtkQ_f8-unsplash.jpg"
 
 const useStyles = createUseStyles({
     pictureCol:{
         background:"primary",
         borderRadius:10,
-        boxShadow:"0 3px 6px rgba(0,0,0,.2)"
+        boxShadow:"0 3px 6px rgba(0,0,0,.2)",
+        backgroundImage:"url("+imageBackground+")",
+        backgroundSize:"cover",
+        backgroundPosition:"center bottom"
     }
 })
 
