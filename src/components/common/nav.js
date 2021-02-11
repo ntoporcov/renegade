@@ -69,7 +69,7 @@ export const NavBar = () => {
                             <NavItem href={"/industries"}   text={"Industries"}/>
                             <NavItem href={"/team"}         text={"Team"}/>
                             <NavItem href={"/contact"}      text={"Contact"}/>
-                            <a className={"externalLink"} href={"https://www.linkedin.com/company/renegade-resources-inc/people/"} target={"_blank"} rel={"noreferrer"}>
+                            <a className={"externalLink"} href={"https://www.linkedin.com/company/renegade-resources-inc/"} target={"_blank"} rel={"noreferrer"}>
                                 <FontAwesomeIcon icon={faLinkedin}/>
                             </a>
                         </Nav>
