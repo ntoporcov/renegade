@@ -140,7 +140,7 @@ const TeamDetails = () => {
                     <p>
                         As Vice President and Managing Partner at Renegade Resources, Will Sheaf brings an accomplished headhunting background in the construction, energy, engineering, and finance industries.<br/><br/>
                         Will has overseen the exponential growth in all divisions of his expertise. This makes him a highly coveted asset to the Renegade team and its premier clients.<br/><br/>
-                        After receiving his bBachelor’s Degree in Social Sciences from Florida State University, Will joined a national staffing and services company before moving into the executive search space. After experiencing rapid success with a recruiting outfit in Jacksonville, FL, Renegade Resources became the product of a tailored approach to executive placements.
+                        After receiving his Bachelor’s Degree in Social Sciences from Florida State University, Will joined a national staffing and services company before moving into the executive search space. After experiencing rapid success with a recruiting outfit in Jacksonville, FL, Renegade Resources became the product of a tailored approach to executive placements.
                     </p>
                 }
             />
