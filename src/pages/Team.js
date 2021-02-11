@@ -3,7 +3,7 @@ import BigHero from "../components/heroes/bigHero";
 import TeamSummary from "../components/misc/teamSummaryRow";
 import TeamDetails from "../components/misc/teamDetails";
 import ContactCTA from "../components/cta/ContactCTA";
-import coverImage from "../img/headshots/large/Renegade-114.jpg"
+import coverImage from "../img/trevor-neely--vj4XtDTxYc-unsplash-pichi.jpg"
 import verticalCover from "../img/headshots/large/Renegade-132.jpg"
 
 const Team = () => {

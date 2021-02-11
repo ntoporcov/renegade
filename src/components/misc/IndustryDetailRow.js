@@ -15,7 +15,7 @@ const IndustryDetailRow = (props) => {
         industryBG:{
             backgroundSize:"cover",
             backgroundBlendMode:"multiply",
-            backgroundColor:colors.gray.dark,
+            backgroundColor:colors.gray.light,
             backgroundPosition:"center",
             marginBottom:"300px",
             marginTop:"100px",

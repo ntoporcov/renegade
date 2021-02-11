@@ -21,15 +21,19 @@ const TeamMember = (props) => {
     const style = useStyles();
 
     return (
-        <Col xs={7} md={6} lg={3} className={style.teamBox+" text-center"}>
+          <Col xs={7} md={6} lg={3} className={style.teamBox+" text-center"}>
+            <div className={"teamButton"} onClick={()=>{
+              document.getElementById(props.hash).scrollIntoView({behavior:"smooth"})
+            }}>
             <Row className={"justify-content-center"}>
-                <Col xs={9} md={8}>
-                    <img src={props.headshot} alt={props.name+" headshot"} className={style.headshot+" img-fluid"} />
-                </Col>
-            </Row>
-            <h3 className={"mb-0"}>{props.name}</h3>
-            <span>{props.position}</span>
-        </Col>
+                  <Col xs={9} md={8}>
+                      <img src={props.headshot} alt={props.name+" headshot"} className={style.headshot+" img-fluid"} />
+                  </Col>
+              </Row>
+              <h3 className={"mb-0"}>{props.name}</h3>
+              <span>{props.position}</span>
+            </div>
+          </Col>
     )
 }
 
@@ -47,16 +51,19 @@ const TeamSummary = () => {
                     headshot={coltonHeadshot}
                     name={"Colton Clark"}
                     position={"President & Managing Partner"}
+                    hash={"colton"}
                 />
                 <TeamMember
                     headshot={willHeadshot}
                     name={"Will Sheaf"}
                     position={"VP & Managing Partner"}
+                    hash={"will"}
                 />
                 <TeamMember
                     headshot={claytonHeadshot}
                     name={"Clayton Fraleigh"}
                     position={"Sr. Executive Recruiter"}
+                    hash={"clayton"}
                 />
             </Row>
         </Container>

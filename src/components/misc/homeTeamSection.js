@@ -10,7 +10,7 @@ const useStyles = createUseStyles({
     teamBackground:{
         background:colors.gray.light+" url("+teamBackground+") no-repeat bottom",
         backgroundSize:"cover",
-        backgroundPosition:"right bottom",
+        backgroundPosition:"right 70%",
         backgroundBlendMode:"multiply",
         minHeight:"80vh",
         color:"white !important"

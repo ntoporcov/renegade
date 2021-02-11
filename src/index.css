@@ -46,6 +46,29 @@ a.button:hover{
   background-color: var(--gray-barely);
 }
 
+.teamButton{
+  display: block;
+  width: auto;
+  color: black !important;
+  cursor: pointer;
+  padding:30px 0;
+  transition:
+          transform ease-out .2s,
+          box-shadow ease-out .2s;
+  border: 1px solid white;
+}
+
+.teamButton:hover{
+  border: 1px solid var(--primary);
+  box-shadow: -10px 10px var(--primary);
+  transform:translateY(-10px)translateX(5px);
+}
+
+.teamButton:active{
+  transform:translateY(-4px)translateX(2px);
+  box-shadow: -3px 3px var(--primary);
+}
+
 h1 {
   font-size: 75px;
   font-weight: 600;

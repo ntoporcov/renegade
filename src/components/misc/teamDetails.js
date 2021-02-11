@@ -2,7 +2,7 @@ import React from "react";
 import {Container, Row, Col} from "react-bootstrap";
 import {createUseStyles} from "react-jss";
 import colors from "../../utils/colors"
-import coltonFeatured from "../../img/james-obernesser-fMHm-ejtF0E-unsplash-pichi.jpg"
+import coltonFeatured from "../../img/pexels-pixabay-459225-pichi.jpg"
 import coltonHeadshot from "../../img/headshots/small/Renegade-102-square.jpg"
 import willFeatured from "../../img/stephen-momot-UivGzIDhVyw-unsplash-pichi.jpg"
 import willHeadshot from "../../img/headshots/small/Renegade-108-square.jpg"
@@ -42,10 +42,13 @@ const TeamMemberDetail = (props) => {
     const style = useStyles();
 
     return(
-        <div className={style.detailWrapper}>
+        <div className={style.detailWrapper} id={props.id}>
             <Row
                 className={style.featuredImage}
-                style={{background:"url("+props.featuredImage+") no-repeat center"}}
+                style={{
+                  background:"url("+props.featuredImage+") no-repeat center",
+                  backgroundPosition:"center 80%"
+                }}
             />
             <Container>
                 <Row className={"justify-content-center"}>
@@ -83,6 +86,7 @@ const TeamDetails = () => {
     return (
         <Container fluid style={{backgroundColor: colors.gray.barely}}>
             <TeamMemberDetail
+                id={"colton"}
                 featuredImage={coltonFeatured}
                 headshot={coltonHeadshot}
                 name={"Colton Clark"}
@@ -96,6 +100,7 @@ const TeamDetails = () => {
                 }
             />
             <TeamMemberDetail
+                id={"will"}
                 featuredImage={willFeatured}
                 headshot={willHeadshot}
                 name={"Will Sheaf"}
@@ -109,6 +114,7 @@ const TeamDetails = () => {
                 }
             />
             <TeamMemberDetail
+                id={"clayton"}
                 featuredImage={claytonFeatured}
                 headshot={claytonHeadshot}
                 name={"Clayton Fraleigh"}

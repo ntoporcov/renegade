@@ -7,7 +7,7 @@ import constructionImage from "../img/james-sullivan-ESZRBtkQ_f8-unsplash.jpg"
 import ContactCTA from "../components/cta/ContactCTA";
 import {faUserHardHat, faLightbulbOn, faAbacus, faPencilRuler} from "@fortawesome/pro-duotone-svg-icons";
 import bgImage from "../img/science-in-hd-pAzSrQF3XUQ-unsplash-pichi.jpg"
-import engineeringImage from "../img/sigmund-r9PeXDCJyEw-unsplash-pichi.jpg"
+import engineeringImage from "../img/spacex-IuE715vJo2I-unsplash-pichi.jpg"
 import accountingImage from "../img/sean-pollock-PhYq704ffdA-unsplash-pichi.jpg"
 
 
@@ -137,7 +137,8 @@ const Industries = () => {
                     bg={engineeringImage}
                     icon={faPencilRuler}
                     col={{
-                        md:{span:10,offset:0},
+                        sm:{span:10,offset:0},
+                        md:{span:8,offset:0},
                     }}
                     title={"Engineering"}
                     paragraph={"Renegade Resources’ Engineering Division partners with leading engineering & design firms that focus on mechanical and electrical manufacturing. With engineering being one of our most dynamic fields, Renegade harnesses years of technical acumen, augmented with acute attention to detail. As a result, we offer our clients a competitive edge within an everchanging industry."}
