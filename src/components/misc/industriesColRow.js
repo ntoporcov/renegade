@@ -7,7 +7,11 @@ import {faUserHardHat, faLightbulbOn, faAbacus, faPencilRuler} from "@fortawesom
 
 const IndustryCol = (props) => {
     return (
-        <Col xs={10} md={3} className={"mb-5"}>
+        <Col xs={10} md={3} className={"scrollButton"}
+             onClick={()=>{
+               document.getElementById(props.scrollTo).scrollIntoView({behavior:"smooth"})
+             }}
+        >
             <FontAwesomeIcon icon={props.icon} color={colors.primary} size={"5x"} className={"mb-3"}/>
             <h3 style={{color: colors.primary}}>{props.title}</h3>
             <p>{props.paragraph}</p>
@@ -19,26 +23,26 @@ const IndustriesColumns = () => {
 
     return (
         <Container>
-            <Row className={"pt-5 text-center justify-content-center justify-content-md-start"}>
+          <Row className={"pt-5 text-center justify-content-center justify-content-md-start"}>
                 <IndustryCol
                     icon={faUserHardHat}
                     title={"Construction"}
-                    paragraph={"We're the best working with this industry because we are really cool and we are nice"}
+                    scrollTo={"construction"}
                 />
                 <IndustryCol
                     icon={faLightbulbOn}
                     title={"Energy"}
-                    paragraph={"We're the best working with this industry because we are really cool and we are nice"}
+                    scrollTo={"energy"}
                 />
                 <IndustryCol
                     icon={faAbacus}
                     title={"Accounting & Finance"}
-                    paragraph={"We're the best working with this industry because we are really cool and we are nice"}
+                    scrollTo={"accounting"}
                 />
                 <IndustryCol
                     icon={faPencilRuler}
                     title={"Engineering"}
-                    paragraph={"We're the best working with this industry because we are really cool and we are nice"}
+                    scrollTo={"engineering"}
                 />
             </Row>
         </Container>

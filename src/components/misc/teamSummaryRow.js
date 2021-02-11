@@ -22,7 +22,7 @@ const TeamMember = (props) => {
 
     return (
           <Col xs={7} md={6} lg={3} className={style.teamBox+" text-center"}>
-            <div className={"teamButton"} onClick={()=>{
+            <div className={"scrollButton"} onClick={()=>{
               document.getElementById(props.hash).scrollIntoView({behavior:"smooth"})
             }}>
             <Row className={"justify-content-center"}>

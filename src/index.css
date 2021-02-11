@@ -46,7 +46,7 @@ a.button:hover{
   background-color: var(--gray-barely);
 }
 
-.teamButton{
+.scrollButton{
   display: block;
   width: auto;
   color: black !important;
@@ -58,13 +58,13 @@ a.button:hover{
   border: 1px solid white;
 }
 
-.teamButton:hover{
+.scrollButton:hover{
   border: 1px solid var(--primary);
   box-shadow: -10px 10px var(--primary);
   transform:translateY(-10px)translateX(5px);
 }
 
-.teamButton:active{
+.scrollButton:active{
   transform:translateY(-4px)translateX(2px);
   box-shadow: -3px 3px var(--primary);
 }

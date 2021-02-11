@@ -11,7 +11,7 @@ const BigHero = (props) => {
          "url("+props.image+")"
           :" url("+heroBG+")",
         backgroundSize:"cover",
-        backgroundPosition:"center",
+        backgroundPosition:props.position ? props.position : "center",
         backgroundBlendMode:"multiply",
         backgroundRepeat:"no-repeat",
         backgroundColor:colors.gray.medium
