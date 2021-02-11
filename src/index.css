@@ -46,6 +46,21 @@ a.button:hover{
   background-color: var(--gray-barely);
 }
 
+.externalLink{
+  margin-left: 10px;
+  padding-left:15px !important;
+  padding-right:15px !important;
+  padding-top: 8.5px !important;
+  border-radius: 3px;
+  font-size: 20px;
+}
+
+.externalLink:hover{
+  background: #5b82aa;
+  box-shadow:0 3px 5px rgba(0,0,0,.2);
+  color:white !important;
+}
+
 .scrollButton{
   display: block;
   width: auto;
@@ -157,6 +172,11 @@ p{
     margin-left: 0 !important;
     padding: 10px 3px !important;
     font-size: 20px;
+  }
+
+  .externalLink{
+    padding:15px !important;
+    font-size: 30px;
   }
 
 }

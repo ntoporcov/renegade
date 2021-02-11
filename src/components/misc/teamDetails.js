@@ -8,6 +8,8 @@ import willFeatured from "../../img/stephen-momot-UivGzIDhVyw-unsplash-pichi.jpg
 import willHeadshot from "../../img/headshots/small/Renegade-108-square.jpg"
 import claytonHeadshot from "../../img/headshots/small/Renegade-106-square.jpg"
 import claytonFeatured from "../../img/allan-nygren--xvKQuNtOhI-unsplash-pichi.jpg"
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faLinkedin} from '@fortawesome/free-brands-svg-icons';
 
 const useStyles = createUseStyles({
     featuredImage:{
@@ -35,7 +37,27 @@ const useStyles = createUseStyles({
     },
     detailWrapper:{
         paddingBottom:"200px"
-    }
+    },
+    linkedinConnect:{
+        fontSize:"20px",
+        display:"flex",
+
+        "& svg":{
+          fontSize: "30px"
+        }
+    },
+    nameWithLinkedIn:{
+      display:'flex',
+      justifyContent:"space-between",
+    },
+    '@media screen and (max-width:768px)':{
+      nameWithLinkedIn:{
+        flexDirection:"column",
+      },
+      linkedinConnect: {
+        padding:"10px 0"
+      }
+    },
 })
 
 const TeamMemberDetail = (props) => {
@@ -58,8 +80,15 @@ const TeamMemberDetail = (props) => {
                                 <img src={props.headshot} alt={props.name+" headshot"} className={style.headshot+" img-fluid"} />
                             </Col>
                             <Col xs={12} xl={9}>
-                                <h2>{props.name}</h2>
-                                <h3>{props.position}</h3>
+                              <div className={style.nameWithLinkedIn}>
+                                  <div>
+                                    <h2>{props.name}</h2>
+                                    <h3>{props.position}</h3>
+                                  </div>
+                                  <a className={style.linkedinConnect} href={props.linkedin} target={"_blank"} rel="noreferrer" >
+                                    Connect On&nbsp;<FontAwesomeIcon icon={faLinkedin}/>
+                                  </a>
+                              </div>
                                 {props.description}
                                 <Row className={"pt-4"}>
                                     {
@@ -86,6 +115,7 @@ const TeamDetails = () => {
     return (
         <Container fluid style={{backgroundColor: colors.gray.barely}}>
             <TeamMemberDetail
+                linkedin={"https://www.linkedin.com/in/colton-clark-bb049765/"}
                 id={"colton"}
                 featuredImage={coltonFeatured}
                 headshot={coltonHeadshot}
@@ -100,6 +130,7 @@ const TeamDetails = () => {
                 }
             />
             <TeamMemberDetail
+                linkedin={"https://www.linkedin.com/in/will-sheaf-637269138/"}
                 id={"will"}
                 featuredImage={willFeatured}
                 headshot={willHeadshot}
@@ -107,13 +138,14 @@ const TeamDetails = () => {
                 position={"VP & Managing Partner"}
                 description={
                     <p>
-                        As Vice President and Managing Partner at Renegade Resources, Will Sheaf brings an accomplished headhunting background in the construction, energy, engineering, and finance.<br/><br/>
+                        As Vice President and Managing Partner at Renegade Resources, Will Sheaf brings an accomplished headhunting background in the construction, energy, engineering, and finance industries.<br/><br/>
                         Will has overseen the exponential growth in all divisions of his expertise. This makes him a highly coveted asset to the Renegade team and its premier clients.<br/><br/>
-                        After receiving his bachelor’s degree in social sciences from Florida State University, Will joined a national staffing and services company before moving into the executive search space. After experiencing rapid success with a recruiting outfit in Jacksonville, FL, Renegade Resources became the product of a tailored approach to executive placements.
+                        After receiving his bBachelor’s Degree in Social Sciences from Florida State University, Will joined a national staffing and services company before moving into the executive search space. After experiencing rapid success with a recruiting outfit in Jacksonville, FL, Renegade Resources became the product of a tailored approach to executive placements.
                     </p>
                 }
             />
             <TeamMemberDetail
+                linkedin={"https://www.linkedin.com/in/clayton-fraleigh-04473260/"}
                 id={"clayton"}
                 featuredImage={claytonFeatured}
                 headshot={claytonHeadshot}
@@ -121,9 +153,9 @@ const TeamDetails = () => {
                 position={"Sr. Executive Recruiter"}
                 description={
                     <div>
-                        As Sr. Executive Recruiter at Renegade Resources, Clayton spearheads all recruiting efforts in accounting and finance, construction, energy, engineering, and executive search. In his role, he sources leading talent for a wide range of employers, working closely with candidates to assist them in finding their next dream job.<br/><br/>
+                        As Sr. Executive Recruiter at Renegade Resources, Clayton spearheads all recruiting efforts in accounting, finance, construction, energy, engineering, and executive search. In his role, he sources leading talent for a wide range of employers, working closely with candidates to assist them in finding their next dream job.<br/><br/>
                         Clayton enjoys helping companies find top tier talent they need to be successful and is passionate about building long-term relationships with his candidates ensuring they find their position of significance.<br/><br/>
-                        Prior to Renegade Resources, Clayton received his bachelor’s degree in political science from Florida State University. Shortly after college, Clayton joined one of the top national staffing agencies where he quickly became one of their top recruiters, making the Presidents Club multiple years in a row. Clayton also spent 2 years working for one of the largest financial service firms in the country, helping clients with their retirement planning.<br/><br/>
+                        Prior to Renegade Resources, Clayton received his Bachelor’s Degree in Political Science from Florida State University. Shortly after college, Clayton joined one of the top national staffing agencies where he quickly became one of their top recruiters, making the Presidents Club multiple years in a row. Clayton also spent 2 years working for one of the largest financial service firms in the country, helping clients with their retirement planning.<br/><br/>
                         In his spare time, Clayton enjoys spending time with his wife, Kelly, and yellow Labrador, Miller, golfing or watching the Seminoles.
                     </div>
                 }

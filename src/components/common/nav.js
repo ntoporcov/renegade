@@ -4,6 +4,8 @@ import {createUseStyles} from "react-jss";
 import renegadeLogo from "../../img/logos/SVG/Logo Full - Gray.svg";
 import colors from "../../utils/colors"
 import {Link, useLocation} from 'react-router-dom';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faLinkedin} from '@fortawesome/free-brands-svg-icons';
 
 const useStyles = createUseStyles({
     navbar:{
@@ -67,6 +69,9 @@ export const NavBar = () => {
                             <NavItem href={"/industries"}   text={"Industries"}/>
                             <NavItem href={"/team"}         text={"Team"}/>
                             <NavItem href={"/contact"}      text={"Contact"}/>
+                            <a className={"externalLink"} href={"https://www.linkedin.com/company/renegade-resources-inc/people/"} target={"_blank"}>
+                                <FontAwesomeIcon icon={faLinkedin}/>
+                            </a>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
