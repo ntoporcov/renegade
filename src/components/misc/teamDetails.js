@@ -125,7 +125,7 @@ const TeamDetails = () => {
                     <p>
                         As President and Managing Partner of Renegade Resources, Colton Clark oversees Business Development, Client Relations, Recruiting, Operations, and Finance.<br/><br/>
                         Colton is a relationship-based executive with a passion for building, leading, and growing high-performance teams. He is renowned for fostering a culture of trust and accountability with his colleagues. Colton partners with his clients closely to turn around divisions that have critical talent gaps. His clients depend on him to help establish and recruit strategic new direction for their companies.<br/><br/>
-                        Colton is originally from Chattanooga, Tennessee and made the move to Florida shortly after high school. From there, Colton acquired two bachelor’s degrees from Florida State University, in Finance and Real Estate. Thereafter, Colton worked with a recruitment firm ranked among the top firms by Forbes. It was in this position that Colton cultivated his own model for a more personable experience in the headhunting industry.
+                        Colton is originally from Chattanooga, Tennessee and made the move to Florida shortly after high school. From there, Colton acquired two Bachelor’s degrees from Florida State University, in Finance and Real Estate. Thereafter, Colton worked with a recruitment firm ranked among the top firms by Forbes. It was in this position that Colton cultivated his own model for a more personable experience in the headhunting industry.
                     </p>
                 }
             />
