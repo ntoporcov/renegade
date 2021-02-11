@@ -85,7 +85,7 @@ const TeamMemberDetail = (props) => {
                                     <h2>{props.name}</h2>
                                     <h3>{props.position}</h3>
                                   </div>
-                                  <a className={style.linkedinConnect} href={props.linkedin} target={"_blank"} rel="noreferrer" >
+                                  <a className={style.linkedinConnect} href={props.linkedin} target={"_blank"} rel={"noreferrer"} >
                                     Connect On&nbsp;<FontAwesomeIcon icon={faLinkedin}/>
                                   </a>
                               </div>
