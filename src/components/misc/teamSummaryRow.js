@@ -4,6 +4,7 @@ import {createUseStyles} from "react-jss";
 import coltonHeadshot from "../../img/headshots/small/Renegade-102-square.jpg"
 import claytonHeadshot from "../../img/headshots/small/Renegade-106-square.jpg"
 import willHeadshot from "../../img/headshots/small/Renegade-108-square.jpg"
+import garretHeadshot from "../../img/headshots/small/garrett.jpg"
 
 const useStyles = createUseStyles({
     headshot:{
@@ -64,6 +65,12 @@ const TeamSummary = () => {
                     name={"Clayton Fraleigh"}
                     position={"Sr. Executive Recruiter"}
                     hash={"clayton"}
+                />
+                <TeamMember
+                    headshot={garretHeadshot}
+                    name={"Garrett Wrightson"}
+                    position={"Executive Recruiter"}
+                    hash={"garrett"}
                 />
             </Row>
         </Container>
