@@ -8,6 +8,8 @@ import willFeatured from "../../img/stephen-momot-UivGzIDhVyw-unsplash-pichi.jpg
 import willHeadshot from "../../img/headshots/small/Renegade-108-square.jpg"
 import claytonHeadshot from "../../img/headshots/small/Renegade-106-square.jpg"
 import claytonFeatured from "../../img/allan-nygren--xvKQuNtOhI-unsplash-pichi.jpg"
+import garretHeadshot from "../../img/headshots/small/garrett.jpg"
+import garretFeatured from "../../img/lance-asper-iPK_3aOVdCM-unsplash.jpeg"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faLinkedin} from '@fortawesome/free-brands-svg-icons';
 
@@ -157,6 +159,22 @@ const TeamDetails = () => {
                         Clayton enjoys helping companies find top tier talent they need to be successful and is passionate about building long-term relationships with his candidates ensuring they find their position of significance.<br/><br/>
                         Prior to Renegade Resources, Clayton received his Bachelor’s Degree in Political Science from Florida State University. Shortly after college, Clayton joined one of the top national staffing agencies where he quickly became one of their top recruiters, making the Presidents Club multiple years in a row. Clayton also spent 2 years working for one of the largest financial service firms in the country, helping clients with their retirement planning.<br/><br/>
                         In his spare time, Clayton enjoys spending time with his wife, Kelly, and yellow Labrador, Miller, golfing or watching the Seminoles.
+                    </div>
+                }
+            />
+            <TeamMemberDetail
+                linkedin={"https://www.linkedin.com/in/garrett-wrightson-3619221a8/"}
+                id={"garrett"}
+                featuredImage={garretFeatured}
+                headshot={garretHeadshot}
+                name={"Garrett Wrightson"}
+                position={"Executive Recruiter"}
+                description={
+                    <div>
+                      As an Executive Recruiter at Renegade Resources, Garret’s primary focus is within Renegade’s construction division.
+                      After receiving his Bachelor’s Degree in Business Marketing from Coastal Carolina University, Garrett made the move
+                      from Maryland to Jacksonville, Florida. Garrett is the newest member of the Renegade team. He is eager to learn and
+                      demonstrate his skill set
                     </div>
                 }
             />
